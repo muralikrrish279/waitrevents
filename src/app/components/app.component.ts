@@ -6,9 +6,9 @@ import { AppDataService } from '../service/app-data.service';
 
 const template = `
 <h1>
-  {{appData?.title}}
+  {{appData?.config?.title}}
 </h1>
-<timeline [data] = "timeLine">
+<timeline [data] = "timeLineData">
 </timeline>
 `
 
@@ -23,7 +23,7 @@ export class AppComponent {
 
   }
 
-  get timeLine() {
+  get timeLineData() {
     switch (this.type) {
       case types.eventType.he:
         return he;
