@@ -5,11 +5,8 @@ import { she } from "../models/data/she";
 import { AppDataService } from '../service/app-data.service';
 
 const template = `
-<h1>
-  {{appData?.config?.title}}
-</h1>
-<timeline [data] = "timeLineData">
-</timeline>
+<home [data] = "timeLineData">
+</home>
 `
 
 @Component({

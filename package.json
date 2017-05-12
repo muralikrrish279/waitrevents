@@ -6,6 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build": "npm run sass && ng build",
+    "sass": "node-sass --include-path scss scss/styles.scss src/css/styles.css",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor"
@@ -24,6 +26,8 @@
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "jquery.countdown": "^1.2.8",
+    "lightslider": "^1.1.6",
+    "node-sass": "^4.5.2",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.8.10"

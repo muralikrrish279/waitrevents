@@ -18,12 +18,14 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
+        "css/styles.css",
+        "../node_modules/lightslider/dist/css/lightslider.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css" 
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/jquery.countdown/jquery.countdown.js",
+        "../node_modules/lightslider/dist/js/lightslider.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"       
       ],
       "environments": {
@@ -54,7 +56,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

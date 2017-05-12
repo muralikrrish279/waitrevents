@@ -1,0 +1,33 @@
+
+.home{
+   img{
+    width : 100%;
+    height: 100%;
+   }
+    
+  .myRow {
+    background : #f2f2f2;
+    min-height : calc(100vh);
+  }
+
+  .left-section
+  {
+    background : #7ED4D2;
+    height: 100%;
+  }
+
+  .right-section
+   {      
+     background : #DC2968;     
+   }
+
+  .pie{
+      top : 50%;
+      position : absolute;
+      text-align : center;
+      background: white;
+      margin-right : -10px;
+      border-radius : 50%;
+    }
+
+  }
