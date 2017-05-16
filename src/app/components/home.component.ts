@@ -1,36 +1,71 @@
 import {
-    Component, OnInit, AfterViewInit, Input,
-    Output, ChangeDetectionStrategy
+  Component, OnInit, AfterViewInit, Input,
+  Output, ChangeDetectionStrategy
 } from '@angular/core';
 import * as types from "../models/app-types";
-import { AppDataService } from '../service/app-data.service';
+import { ImageService } from '../service/image.service';
 
 const template: string = `
 <div class="container-fluid home">
+    <div class="row header">
+    </div>
     <div class="row myRow">
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
-        <carousel [data]="null"></carousel>
+        <carousel [imagePaths]="hisImages"></carousel>
       </div>
       <div class="col-md-6 col-xs-12 col-lg-6 right-section">
-        <carousel [data]="null"></carousel>
+        <carousel [imagePaths]="herImages"></carousel>
       </div>
     </div>
 </div>`
 
 @Component({
-    selector: 'home',
-    template: template
+  selector: 'home',
+  template: template
 })
-export class HomeComponent implements OnInit {
-    @Input() data: types.ITimeline;
+export class HomeComponent {
+  @Input() data: types.ITimeline;
 
-    constructor() {
-        
-    }
+  private hisImages: string[] = [];
+  private herImages: string[];
 
-    ngOnInit(): void {
+  constructor(private imageService: ImageService) {
 
-    }
+  }
+
+  ngOnChanges(): void {
+    this.LoadHisImages();
+    this.LoadHerImages();
+  }
+
+  LoadHisImages(): void {
+    // this.imageService.hisImages()
+    //   .subscribe(item => {
+    //     if (Array.isArray(item)) {
+    //       item.forEach(image => {
+    //         this.hisImages.push(`/images/he/${image}`)
+    //       })
+    //       console.log(this.hisImages);
+    //     }
+    //   });
+    this.hisImages = [
+      "/images/he/Cricketer.JPG",
+      "/images/he/Foodie.JPG",
+      "/images/he/Photographer.JPG",
+      "/images/he/Traveler.JPG",
+      "/images/he/Cook.JPG",      
+    ]
+  }
+
+   LoadHerImages(): void {
+    this.herImages = [
+      "/images/she/Shopper.JPG",
+      "/images/she/Dancer.JPG",
+      "/images/she/Yogik.JPG",
+      "/images/she/Singer.JPG",
+      "/images/she/SelfieQueen.JPG",
+    ]
+  }
 
 }
 

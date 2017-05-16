@@ -3,6 +3,7 @@ import * as types from "../models/app-types";
 import { he } from "../models/data/he";
 import { she } from "../models/data/she";
 import { AppDataService } from '../service/app-data.service';
+import { ImageService } from '../service/image.service';
 
 const template = `
 <home [data] = "timeLineData">
@@ -16,8 +17,11 @@ const template = `
 export class AppComponent {
   private type: types.eventType = types.eventType.he;
 
-  constructor(private appData : AppDataService) {
+  constructor(private appData: AppDataService, private imageService: ImageService) {
 
+  }
+
+  ngOnInit(): void {
   }
 
   get timeLineData() {

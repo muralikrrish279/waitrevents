@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home.component';
 import { CarouselComponent } from './components/carousel.component';
 import { TimelineComponent } from './components/timeline.component';
 import { AppDataService } from './service/app-data.service';
+import { ImageService } from './service/image.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AppDataService } from './service/app-data.service';
     HttpModule
   ],
   providers: [
-    AppDataService
+    AppDataService,
+    ImageService
   ],
   bootstrap: [AppComponent]
 })
