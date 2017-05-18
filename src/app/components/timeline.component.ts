@@ -2,8 +2,11 @@ import {
     Component, OnInit, AfterViewInit, Input,
     Output, ChangeDetectionStrategy
 } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import * as types from "../models/app-types";
 import { AppDataService } from '../service/app-data.service';
+import { he } from "../models/data/he";
+import { she } from "../models/data/she";
 
 const template: string = `<div class="container">
     <div class="page-header">
@@ -29,14 +32,44 @@ const template: string = `<div class="container">
     template: template
 })
 export class TimelineComponent implements OnInit {
-    @Input() data: types.ITimeline;
+    private type: types.eventType = types.eventType.he;
 
-    constructor() {
-        
+    constructor(private route: ActivatedRoute, private router: Router) {
+
     }
 
     ngOnInit(): void {
+        this.route.params.subscribe(params => {
+            console.log(params["type"])
+            if (params["type"]) {
+                switch (params["type"]) {
+                    case "he":
+                        this.type = types.eventType.he;
+                        break;
+                    case "she":
+                        this.type = types.eventType.she;
+                        break;
+                    case "meetup":
+                        this.type = types.eventType.meetup
+                        break;
+                    default:
+                        this.type = types.eventType.she;
+                }
+            }
+        })
+    }
 
+    get data() {
+        switch (this.type) {
+            case types.eventType.he:
+                return he;
+            case types.eventType.she:
+                return she;
+            case types.eventType.meetup:
+                return he;
+            default:
+                break;
+        }
     }
 
 }

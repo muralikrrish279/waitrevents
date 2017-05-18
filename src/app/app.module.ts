@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './components/app.component';
@@ -8,6 +9,13 @@ import { CarouselComponent } from './components/carousel.component';
 import { TimelineComponent } from './components/timeline.component';
 import { AppDataService } from './service/app-data.service';
 import { ImageService } from './service/image.service';
+
+const appRoutes: Routes = [
+  { path: 'invite', component: TimelineComponent },
+  { path: 'story/:type', component: TimelineComponent },
+  { path: '', component: HomeComponent },
+  { path: '**', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
@@ -19,7 +27,8 @@ import { ImageService } from './service/image.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     AppDataService,

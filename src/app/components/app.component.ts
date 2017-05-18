@@ -6,8 +6,7 @@ import { AppDataService } from '../service/app-data.service';
 import { ImageService } from '../service/image.service';
 
 const template = `
-<home [data] = "timeLineData">
-</home>
+<router-outlet></router-outlet>
 `
 
 @Component({
@@ -22,18 +21,9 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
+
   }
 
-  get timeLineData() {
-    switch (this.type) {
-      case types.eventType.he:
-        return he;
-      case types.eventType.she:
-        return she;
-      case types.eventType.meetup:
-        return he;
-      default:
-        break;
-    }
-  }
+ 
+
 }

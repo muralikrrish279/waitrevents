@@ -3,6 +3,8 @@ import {
   Output, ChangeDetectionStrategy
 } from '@angular/core';
 import * as types from "../models/app-types";
+import * as he from "../models/data/he";
+import * as she from "../models/data/she";
 import { ImageService } from '../service/image.service';
 
 const template: string = `
@@ -12,9 +14,11 @@ const template: string = `
     <div class="row myRow">
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
         <carousel [imagePaths]="hisImages"></carousel>
+        <a class ="btn btn-warning btn-lg left-button"routerLink="/story/he" routerLinkActive="active">Get to know him!!</a>
       </div>
       <div class="col-md-6 col-xs-12 col-lg-6 right-section">
         <carousel [imagePaths]="herImages"></carousel>
+        <a class ="btn btn-info btn-lg right-button"routerLink="/story/she" routerLinkActive="active">Get to know her!!</a>        
       </div>
     </div>
 </div>`
@@ -30,42 +34,10 @@ export class HomeComponent {
   private herImages: string[];
 
   constructor(private imageService: ImageService) {
-
+    this.hisImages = he.images;
+    this.herImages = she.images;
   }
 
-  ngOnChanges(): void {
-    this.LoadHisImages();
-    this.LoadHerImages();
-  }
-
-  LoadHisImages(): void {
-    // this.imageService.hisImages()
-    //   .subscribe(item => {
-    //     if (Array.isArray(item)) {
-    //       item.forEach(image => {
-    //         this.hisImages.push(`/images/he/${image}`)
-    //       })
-    //       console.log(this.hisImages);
-    //     }
-    //   });
-    this.hisImages = [
-      "/images/he/Cricketer.JPG",
-      "/images/he/Foodie.JPG",
-      "/images/he/Photographer.JPG",
-      "/images/he/Traveler.JPG",
-      "/images/he/Cook.JPG",      
-    ]
-  }
-
-   LoadHerImages(): void {
-    this.herImages = [
-      "/images/she/Shopper.JPG",
-      "/images/she/Dancer.JPG",
-      "/images/she/Yogik.JPG",
-      "/images/she/Singer.JPG",
-      "/images/she/SelfieQueen.JPG",
-    ]
-  }
 
 }
 
