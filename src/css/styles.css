@@ -154,18 +154,19 @@
     width: 100%;
     height: 100%; }
   .home .header {
-    min-height: 200px; }
+    min-height: 200px;
+    text-align: center; }
   .home .myRow {
     min-height: calc(100vh-200px); }
   .home .left-section {
-    opacity: 0.9;
+    opacity: 0.5;
     box-shadow: 2px 10px 10px #888888; }
   .home .left-button {
     float: right; }
   .home .right-button {
     float: right; }
   .home .right-section {
-    opacity: 0.9;
+    opacity: 0.7;
     box-shadow: 2px 10px 10px #888888; }
   .home .pie {
     top: 50%;
@@ -174,3 +175,35 @@
     background: white;
     margin-right: -10px;
     border-radius: 50%; }
+
+.flip-container {
+  perspective: 1000;
+  border: 1px solid #ccc; }
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg); }
+
+.flip-container, .front, .back {
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  left: 50%; }
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.front {
+  background: yellow;
+  z-index: 2; }
+
+.back {
+  transform: rotateY(180deg);
+  background: red; }

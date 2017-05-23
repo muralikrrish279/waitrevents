@@ -7,6 +7,7 @@ import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home.component';
 import { CarouselComponent } from './components/carousel.component';
 import { TimelineComponent } from './components/timeline.component';
+import { FlipTileComponent } from './components/flip-tile.component';
 import { AppDataService } from './service/app-data.service';
 import { ImageService } from './service/image.service';
 
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     CarouselComponent,
-    TimelineComponent
+    TimelineComponent,
+    FlipTileComponent
   ],
   imports: [
     BrowserModule,

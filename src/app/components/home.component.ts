@@ -10,6 +10,7 @@ import { ImageService } from '../service/image.service';
 const template: string = `
 <div class="container-fluid home">
     <div class="row header">
+      <flip-tile></flip-tile>
     </div>
     <div class="row myRow">
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
