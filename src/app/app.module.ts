@@ -7,12 +7,12 @@ import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home.component';
 import { CarouselComponent } from './components/carousel.component';
 import { TimelineComponent } from './components/timeline.component';
-import { FlipTileComponent } from './components/flip-tile.component';
+import { EventDetailsComponent } from './components/event-details.component';
 import { AppDataService } from './service/app-data.service';
 import { ImageService } from './service/image.service';
 
 const appRoutes: Routes = [
-  { path: 'invite', component: TimelineComponent },
+  { path: 'invite', component: EventDetailsComponent },
   { path: 'story/:type', component: TimelineComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent }
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     HomeComponent,
     CarouselComponent,
     TimelineComponent,
-    FlipTileComponent
+    EventDetailsComponent
   ],
   imports: [
     BrowserModule,

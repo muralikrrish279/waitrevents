@@ -8,9 +8,9 @@ import { AppDataService } from '../service/app-data.service';
 import { he } from "../models/data/he";
 import { she } from "../models/data/she";
 
-const template: string = `<div class="container">
+const template: string = `<div class="container-fluid wrapper">
     <div class="page-header">
-        <h1 id="timeline">{{data?.timelineName}}</h1>
+        <h1>{{data?.timelineName}}</h1>
     </div>
     <ul class="timeline">
         <li *ngFor= "let item of data?.events,let i = index">

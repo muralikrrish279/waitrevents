@@ -10,17 +10,20 @@ import { ImageService } from '../service/image.service';
 const template: string = `
 <div class="container-fluid home">
     <div class="row header">
-      <flip-tile></flip-tile>
+        <a class ="btn btn-info btn-lg event-details" routerLink="/invite" routerLinkActive="active">Invite!!</a>        
     </div>
-    <div class="row myRow">
+    <div class="row">
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
-        <carousel [imagePaths]="hisImages"></carousel>
+        <carousel [imagePaths]="hisImages" [id]="him"></carousel>
         <a class ="btn btn-warning btn-lg left-button"routerLink="/story/he" routerLinkActive="active">Get to know him!!</a>
       </div>
       <div class="col-md-6 col-xs-12 col-lg-6 right-section">
-        <carousel [imagePaths]="herImages"></carousel>
+        <carousel [imagePaths]="herImages" [id]="her"></carousel>
         <a class ="btn btn-info btn-lg right-button"routerLink="/story/she" routerLinkActive="active">Get to know her!!</a>        
       </div>
+    </div>
+    <div class="row footer">
+      <p>©2017 Muralikrishnan All Rights Reserved</p>
     </div>
 </div>`
 

@@ -7,7 +7,7 @@ import { AppDataService } from '../service/app-data.service';
 
 const template: string = `
 <ul class ="vertical_slider">
-    <li *ngFor="let item of imagePaths" data-thumb="img/thumb/cS-1.jpg">
+    <li *ngFor="let item of imagePaths">
         <img [src]="item" />
     </li>
 </ul>
@@ -27,11 +27,6 @@ export class CarouselComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
-    }
-
-
-    ngAfterViewInit(): void {
         $(document).ready(() => {
             $('.vertical_slider').lightSlider({
                 item: 1,
@@ -39,9 +34,13 @@ export class CarouselComponent implements OnInit {
                 verticalHeight: 600,
                 auto: true,
                 loop: true,
-                pauseOnHover : true
+                pauseOnHover: true
             });
         });
+    }
+
+
+    ngAfterViewInit(): void {
     }
 
 }

@@ -7,21 +7,14 @@ import * as types from "../models/app-types";
 import { AppDataService } from '../service/app-data.service';
 
 const template: string = `
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-    </div>
-    <div class="back">
-    </div>
-  </div>
-</div>
+Event details goes here!!!
 `
 
 @Component({
-    selector: 'flip-tile',
+    selector: 'event-details',
     template: template
 })
-export class FlipTileComponent implements OnInit {
+export class EventDetailsComponent implements OnInit {
     private type: types.eventType = types.eventType.he;
 
     constructor(private route: ActivatedRoute, private router: Router) {
