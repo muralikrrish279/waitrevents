@@ -10,6 +10,9 @@ import { TimelineComponent } from './components/timeline.component';
 import { EventDetailsComponent } from './components/event-details.component';
 import { AppDataService } from './service/app-data.service';
 import { ImageService } from './service/image.service';
+import { CoverComponent } from './components/cover.component';
+
+
 
 const appRoutes: Routes = [
   { path: 'invite', component: EventDetailsComponent },
@@ -24,7 +27,8 @@ const appRoutes: Routes = [
     HomeComponent,
     CarouselComponent,
     TimelineComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    CoverComponent
   ],
   imports: [
     BrowserModule,

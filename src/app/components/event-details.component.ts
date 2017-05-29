@@ -7,7 +7,22 @@ import * as types from "../models/app-types";
 import { AppDataService } from '../service/app-data.service';
 
 const template: string = `
-Event details goes here!!!
+<div class="eventsHome">
+    <ul class ="tiles row">
+        <li class="col-xs-6">
+        </li>
+         <li class="col-xs-6">
+        </li>
+         <li class="col-xs-6">
+        </li>
+         <li class="col-xs-6">
+        </li>
+         <li class="col-xs-6">
+        </li>
+         <li class="col-xs-6">
+        </li>
+    </ul>  
+</div>
 `
 
 @Component({
@@ -22,7 +37,18 @@ export class EventDetailsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-    
+        this.tileCarouselInit();
+    }
+
+    tileCarouselInit() {
+        $(document).ready(() => {
+            $('.tiles').lightSlider({
+                item: 3,
+                auto: true,
+                loop: true,
+                pauseOnHover: true
+            });
+        });
     }
 
 }
