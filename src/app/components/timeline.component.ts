@@ -25,7 +25,10 @@ const template: string = `<div class="container-fluid wrapper">
           </div>
         </li>
     </ul>
-</div>`
+    <home-link></home-link>
+</div>
+
+`
 
 @Component({
     selector: 'timeline',

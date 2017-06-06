@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home.component';
+import { HomeLinkComponent } from './components/home-link.component';
 import { CarouselComponent } from './components/carousel.component';
 import { TimelineComponent } from './components/timeline.component';
 import { EventDetailsComponent } from './components/event-details.component';
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     CarouselComponent,
     TimelineComponent,
     EventDetailsComponent,
-    CoverComponent
+    CoverComponent,
+    HomeLinkComponent
   ],
   imports: [
     BrowserModule,
