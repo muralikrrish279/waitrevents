@@ -13,14 +13,14 @@ const template: string = `<div class="container-fluid wrapper">
         <h1>{{data?.timelineName}}</h1>
     </div>
     <ul class="timeline">
-        <li *ngFor= "let item of data?.events,let i = index">
-          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+        <li *ngFor= "let item of data?.events,let i = index" [ngClass]="getClassName(i)">
+          <div class="timeline-badge"><i class="glyphicon" [ngClass]="item?.badgeIcon"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">{{item?.title}}</h4>
             </div>
             <div class="timeline-body">
-              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              <p>{{item?.description}}</p>
             </div>
           </div>
         </li>
@@ -39,6 +39,15 @@ export class TimelineComponent implements OnInit {
 
     constructor(private route: ActivatedRoute, private router: Router) {
 
+    }
+
+    getClassName(index: number): string {
+        if (index % 2 !== 0) {
+            console.log(index)
+            return "timeline-inverted";
+        }else{
+            return "";
+        }
     }
 
     ngOnInit(): void {

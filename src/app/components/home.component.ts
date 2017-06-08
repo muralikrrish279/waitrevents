@@ -9,8 +9,8 @@ import { ImageService } from '../service/image.service';
 
 const template: string = `
 <div class="container-fluid home">
-    <cover>
-    </cover>
+    <cover></cover>
+    <img src="/images/savethedate.gif" class="savedate" />
     <div class="row">
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
         <carousel [imagePaths]="hisImages" [id]="him"></carousel>

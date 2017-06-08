@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home.component';
 import { HomeLinkComponent } from './components/home-link.component';
+import { StickyNoteComponent } from './components/sticky-note.component';
 import { CarouselComponent } from './components/carousel.component';
 import { TimelineComponent } from './components/timeline.component';
 import { EventDetailsComponent } from './components/event-details.component';
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     TimelineComponent,
     EventDetailsComponent,
     CoverComponent,
-    HomeLinkComponent
+    HomeLinkComponent,
+    StickyNoteComponent
   ],
   imports: [
     BrowserModule,

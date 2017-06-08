@@ -8,7 +8,7 @@ import { AppDataService } from '../service/app-data.service';
 const template: string = `
 <ul class ="vertical_slider">
     <li *ngFor="let item of imagePaths">
-        <img [src]="item" />
+        <img class="trollImage" [src]="item" />
     </li>
 </ul>
 `

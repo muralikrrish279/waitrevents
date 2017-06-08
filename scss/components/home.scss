@@ -1,10 +1,11 @@
 body{
-    background-image : url("/images/cover.jpg");
+    background-image : url("/images/body.jpg");
+    background-repeat: no-repeat;
 }
 
 .home{   
    
-   img{
+   .trollImage{
     width : 100%;
     height: 100%;
    }
@@ -29,7 +30,7 @@ body{
 
   .left-section
   {
-    opacity: 0.7;
+    opacity: 0.9;
     box-shadow: 2px 10px 10px #888888;
   }
 
@@ -45,7 +46,7 @@ body{
 
   .right-section
    { 
-    opacity: 0.7; 
+    opacity: 0.9; 
     box-shadow: 2px 10px 10px #888888;             
    }
 
@@ -77,4 +78,14 @@ body{
         color: white;
         font-size: 25px;
       }
+   }
+
+   .savedate{
+     position: fixed;
+     top :40px;
+     right : 10px;
+     height: 175px;
+     width: 400px;
+     filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+     transform: rotate(7deg) translateX(-10%);
    }

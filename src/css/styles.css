@@ -133,34 +133,11 @@
 .timeline-body > p + p {
   margin-top: 5px; }
 
-@media (max-width: 767px) {
-  ul.timeline:before {
-    left: 40px; }
-  ul.timeline > li > .timeline-panel {
-    width: calc(100% - 90px);
-    width: -moz-calc(100% - 90px);
-    width: -webkit-calc(100% - 90px); }
-  ul.timeline > li > .timeline-badge {
-    left: 15px;
-    margin-left: 0;
-    top: 16px; }
-  ul.timeline > li > .timeline-panel {
-    float: right; }
-  ul.timeline > li > .timeline-panel:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto; }
-  ul.timeline > li > .timeline-panel:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto; } }
-
 body {
-  background-image: url("/images/cover.jpg"); }
+  background-image: url("/images/body.jpg");
+  background-repeat: no-repeat; }
 
-.home img {
+.home .trollImage {
   width: 100%;
   height: 100%; }
 
@@ -179,7 +156,7 @@ body {
   color: white; }
 
 .home .left-section {
-  opacity: 0.7;
+  opacity: 0.9;
   box-shadow: 2px 10px 10px #888888; }
 
 .home .left-button {
@@ -189,7 +166,7 @@ body {
   float: right; }
 
 .home .right-section {
-  opacity: 0.7;
+  opacity: 0.9;
   box-shadow: 2px 10px 10px #888888; }
 
 .home .pie {
@@ -213,6 +190,15 @@ body {
   .home-link > a > i {
     color: white;
     font-size: 25px; }
+
+.savedate {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  height: 175px;
+  width: 400px;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+  transform: rotate(7deg) translateX(-10%); }
 
 #tile {
   width: 300px;
@@ -338,3 +324,44 @@ p {
     .cover .hanging-light :hover {
       opacity: 0.9;
       box-shadow: 2px 10px 10px black; }
+
+.note {
+  width: 16em;
+  min-height: 10em;
+  background: #f8de59;
+  position: fixed;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+  transform: rotate(7deg) translateX(-50%);
+  top: 40px;
+  right: 2%; }
+  .note .noteText {
+    font: italic 1.6em Georgia, Times, serif;
+    background: transparent;
+    width: 8.4em;
+    height: 5.8em;
+    margin: 20% 0.8em 0 0.8em;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    letter-spacing: -1px;
+    outline-style: none;
+    resize: none; }
+
+.note:before {
+  content: "";
+  position: absolute;
+  right: 2em;
+  bottom: -2em;
+  left: 0;
+  border: 1em solid #f8de59;
+  z-index: -1; }
+
+.note:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -2em;
+  border-width: 2em 2em 0 0;
+  border-style: solid;
+  border-color: #d69722 transparent;
+  filter: drop-shadow(-4px 5px 9px rgba(0, 0, 0, 0.5)); }
