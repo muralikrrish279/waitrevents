@@ -1,11 +1,11 @@
 .wrapper{
-    box-shadow: 0 1px 6px whitesmoke;
+    box-shadow: 0 1px 6px gray;
+    border: 1px;
     padding : 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border-radius: 2%;
     width : 90%;
-    color: white;    
+    background: linear-gradient(to right,white,pink);
+    opacity: .9;
 }
 .timeline {
   list-style: none;

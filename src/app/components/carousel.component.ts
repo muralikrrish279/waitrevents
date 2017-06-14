@@ -28,7 +28,15 @@ export class CarouselComponent implements OnInit {
 
     ngOnInit(): void {
         $(document).ready(() => {
-            $('.vertical_slider').lightSlider({
+            (<any>$('.vertical_slider')).first().lightSlider({
+                item: 1,
+                vertical: true,
+                verticalHeight: 600,
+                auto: true,
+                loop: true,
+                pauseOnHover: true
+            });
+              (<any>$('.vertical_slider')).last().lightSlider({
                 item: 1,
                 vertical: true,
                 verticalHeight: 600,

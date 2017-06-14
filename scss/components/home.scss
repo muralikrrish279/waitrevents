@@ -1,6 +1,7 @@
 body{
     background-image : url("/images/body.jpg");
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .home{   
@@ -8,6 +9,17 @@ body{
    .trollImage{
     width : 100%;
     height: 100%;
+   }
+
+   .dummyRow{
+     height : 250px;
+     > i {
+       position: fixed;
+       top : 10;
+       left:47%;
+       font-size: 48px;
+       color: gray;
+     }
    }
 
    .header {
@@ -31,7 +43,6 @@ body{
   .left-section
   {
     opacity: 0.9;
-    box-shadow: 2px 10px 10px #888888;
   }
 
    .left-button
@@ -47,19 +58,7 @@ body{
   .right-section
    { 
     opacity: 0.9; 
-    box-shadow: 2px 10px 10px #888888;             
    }
-
-  .pie{
-      top : 50%;
-      position : absolute;
-      text-align : center;
-      background: white;
-      margin-right : -10px;
-      border-radius : 50%;
-    }
-
-
 
   }
 
@@ -68,11 +67,11 @@ body{
       width: 50px;
       border-radius: 50%;
       position: fixed;
-      top: 10px;
+      bottom: 10px;
       right: 10px;
       text-align : center; 
       line-height : 57px;
-      background: linear-gradient(to right,white,orange);
+      background: linear-gradient(to right,white,red);
 
       >a >i{
         color: white;
@@ -85,7 +84,29 @@ body{
      top :40px;
      right : 10px;
      height: 175px;
-     width: 400px;
+     width: 40%;
      filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
      transform: rotate(7deg) translateX(-10%);
+   }
+
+
+    .ready{
+     opacity: 1;
+     position: fixed;
+     top :40px;
+     left : 40%;
+     height: 195px;
+     width: 20%;
+     cursor: pointer;
+     filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+   }
+
+    .wed{
+     position: fixed;
+     top :40px;
+     left : 10px;
+     height: 175px;
+     width: 40%;
+     filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+     transform: rotate(353deg) translateX(10%);
    }

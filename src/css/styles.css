@@ -1,11 +1,11 @@
 .wrapper {
-  box-shadow: 0 1px 6px whitesmoke;
+  box-shadow: 0 1px 6px gray;
+  border: 1px;
   padding: 5%;
-  margin-top: 10px;
-  margin-bottom: 10px;
   border-radius: 2%;
   width: 90%;
-  color: white; }
+  background: linear-gradient(to right, white, pink);
+  opacity: .9; }
 
 .timeline {
   list-style: none;
@@ -135,11 +135,21 @@
 
 body {
   background-image: url("/images/body.jpg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 .home .trollImage {
   width: 100%;
   height: 100%; }
+
+.home .dummyRow {
+  height: 250px; }
+  .home .dummyRow > i {
+    position: fixed;
+    top: 10;
+    left: 47%;
+    font-size: 48px;
+    color: gray; }
 
 .home .header {
   min-height: 150px;
@@ -156,8 +166,7 @@ body {
   color: white; }
 
 .home .left-section {
-  opacity: 0.9;
-  box-shadow: 2px 10px 10px #888888; }
+  opacity: 0.9; }
 
 .home .left-button {
   float: right; }
@@ -166,27 +175,18 @@ body {
   float: right; }
 
 .home .right-section {
-  opacity: 0.9;
-  box-shadow: 2px 10px 10px #888888; }
-
-.home .pie {
-  top: 50%;
-  position: absolute;
-  text-align: center;
-  background: white;
-  margin-right: -10px;
-  border-radius: 50%; }
+  opacity: 0.9; }
 
 .home-link {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   position: fixed;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   text-align: center;
   line-height: 57px;
-  background: linear-gradient(to right, white, orange); }
+  background: linear-gradient(to right, white, red); }
   .home-link > a > i {
     color: white;
     font-size: 25px; }
@@ -196,9 +196,28 @@ body {
   top: 40px;
   right: 10px;
   height: 175px;
-  width: 400px;
+  width: 40%;
   filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
   transform: rotate(7deg) translateX(-10%); }
+
+.ready {
+  opacity: 1;
+  position: fixed;
+  top: 40px;
+  left: 40%;
+  height: 195px;
+  width: 20%;
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8)); }
+
+.wed {
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  height: 175px;
+  width: 40%;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+  transform: rotate(353deg) translateX(10%); }
 
 #tile {
   width: 300px;
@@ -254,17 +273,80 @@ p {
 .text-link:hover {
   text-decoration: underline; }
 
-.eventsHome .tiles {
+.eventsHome {
+  margin-left: 5%;
+  box-shadow: 0 1px 6px gray;
+  border: 1px;
+  padding: 10px;
+  border-radius: 2%;
   width: 90%;
-  display: inline-block;
-  margin: 5%;
-  background-color: #fff;
-  border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e0e5f0;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 10px; }
+  background: linear-gradient(to right, white, pink);
+  opacity: .9;
+  /* Style the tab */
+  /* Style the buttons inside the tab */
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */ }
+  .eventsHome .section, .eventsHome .cover-header, .eventsHome .invitation, .eventsHome .their-story, .eventsHome .map, .eventsHome .skype {
+    width: 100%;
+    min-height: 400px;
+    display: inline-block;
+    background: white; }
+  .eventsHome .parallax {
+    /* The image used */
+    background-image: url("/images/body.jpg");
+    /* Full height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .eventsHome .cover-header {
+    text-align: center;
+    min-height: 100px; }
+    .eventsHome .cover-header > img {
+      width: 100%;
+      height: 100%;
+      padding-top: 10px; }
+  .eventsHome .invitation {
+    text-align: center; }
+    .eventsHome .invitation > img {
+      width: 80%;
+      height: 100%;
+      padding-top: 10px; }
+  .eventsHome .their-story {
+    text-align: center; }
+    .eventsHome .their-story > img {
+      width: 80%;
+      height: 100%;
+      padding-top: 10px; }
+  .eventsHome .map {
+    text-align: center; }
+    .eventsHome .map > iframe {
+      width: 80%;
+      height: 500px;
+      padding-top: 10px; }
+  .eventsHome .skype {
+    text-align: center; }
+    .eventsHome .skype > a > img {
+      width: 80%;
+      height: 100%;
+      padding-top: 10px; }
+  .eventsHome div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1; }
+  .eventsHome div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s; }
+  .eventsHome div.tab button:hover {
+    background-color: #ddd; }
+  .eventsHome div.tab button.active {
+    background-color: #ccc; }
 
 .cover {
   height: 250px; }
@@ -287,43 +369,53 @@ p {
     height: 225px;
     margin-left: 400px; }
   .cover .story, .cover .his-story, .cover .her-story, .cover .their-story, .cover .invite-story {
-    width: 150px;
+    width: 50px;
     border-radius: 50%;
-    height: 150px;
+    height: 50px;
     position: fixed;
     text-align: center;
-    line-height: 150px;
+    line-height: 50px;
     z-index: 2001;
     opacity: 0.9;
     color: white;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: normal; }
+    .cover .story > a > i, .cover .his-story > a > i, .cover .her-story > a > i, .cover .their-story > a > i, .cover .invite-story > a > i {
+      font-size: 20px; }
   .cover .his-story {
     background: #4da8df;
     background: linear-gradient(to right, white, #4da8df);
-    margin-left: 0px;
-    top: 50px; }
+    top: 10px;
+    left: 10px; }
+    .cover .his-story > a {
+      color: darkblue; }
   .cover .her-story {
     background: #80af07;
     background: linear-gradient(to right, white, #80af07);
-    margin-left: 100px;
-    top: 175px; }
+    top: 10px;
+    right: 10px; }
+    .cover .her-story > a {
+      color: darkgreen; }
   .cover .their-story {
     background: #b9b9b9;
-    background: linear-gradient(to right, white, #b9b9b9);
-    margin-left: 230px;
-    top: 95px; }
+    background: linear-gradient(to right, white, pink);
+    bottom: 18px;
+    left: 10px; }
+    .cover .their-story > a {
+      color: red; }
+    .cover .their-story > a > i {
+      font-size: 22px; }
   .cover .invite-story {
     background: #2d83bc;
-    background: linear-gradient(to right, white, #2d83bc);
-    margin-left: 330px;
-    top: 225px; }
-  .cover .hanging-light {
-    display: inline-block; }
-    .cover .hanging-light :hover {
-      opacity: 0.9;
-      box-shadow: 2px 10px 10px black; }
+    background: linear-gradient(to right, white, pink);
+    bottom: 10px;
+    right: 10px; }
+    .cover .invite-story > a {
+      color: brown; }
+  .cover .hanging-light :hover {
+    opacity: 0.9;
+    box-shadow: 2px 10px 10px black; }
 
 .note {
   width: 16em;

@@ -1,3 +1,5 @@
+$fixed-padding : 10px;
+$circle-size : 50px;
 .cover{
    
    height: 250px;
@@ -35,54 +37,71 @@
   }
 
   .story{
-    width : 150px;
+    width : $circle-size;
     border-radius : 50%;
-    height :150px;
+    height :$circle-size;
     position:fixed;
     text-align : center; 
-    line-height : 150px; 
+    line-height : $circle-size; 
     z-index: 2001;
     opacity: 0.9;
     color : white;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: normal;
+     > a  > i{
+        font-size : 20px;
+      }
   }
 
   .his-story{
     @extend .story;
     background : #4da8df;
     background: linear-gradient(to right, white, #4da8df);
-    margin-left : 0px;
-    top:50px;
+    top:$fixed-padding;
+    left:$fixed-padding;
+    > a {
+      color: darkblue;
+    }
   }
 
   .her-story{
     @extend .story;
     background : #80af07;
     background: linear-gradient(to right, white, #80af07);    
-    margin-left : 100px;
-    top:175px;
+    top:$fixed-padding;
+    right : $fixed-padding;
+    > a {
+      color: darkgreen;
+    }
   }
 
 .their-story{
   @extend .story;  
   background : #b9b9b9;
-  background: linear-gradient(to right, white, #b9b9b9);      
-  margin-left : 230px;
-  top:95px;
+  background: linear-gradient(to right, white,pink);      
+  bottom:18px;
+  left : $fixed-padding;
+  > a {
+      color: red;
+    }
+  > a  > i{
+      font-size : 22px;
+    }
 }
 
   .invite-story{
     @extend .story;      
     background : #2d83bc;
-    background: linear-gradient(to right, white, #2d83bc);          
-    margin-left : 330px;
-    top:225px;
+    background: linear-gradient(to right, white, pink);          
+    bottom:$fixed-padding;
+    right : $fixed-padding;
+    > a {
+      color: brown;
+    }
   }
 
   .hanging-light{
-    display : inline-block;
 
     :hover{
       opacity: 0.9;

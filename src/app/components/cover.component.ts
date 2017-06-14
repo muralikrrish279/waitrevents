@@ -11,27 +11,31 @@ import { she } from "../models/data/she";
 const template: string = `
 <div class="cover">
     <div class="hanging-light">
-        <div class="his-line"></div>
         <div class="his-story">
-            <a routerLink="/story/he" routerLinkActive="active">His Story</a>
+            <a routerLink="/story/he" routerLinkActive="active">
+                <i class="glyphicon glyphicon-king"></i>            
+            </a>
+        </div>
+    </div>
+    <div >
+        <div class="her-story" title="Her Story">
+            <a routerLink="/story/she" routerLinkActive="active">
+                <i class="glyphicon glyphicon-queen"></i>
+            </a>        
         </div>
     </div>
     <div class="hanging-light">
-        <div class="her-line"></div>
-        <div class="her-story">
-            <a routerLink="/story/she" routerLinkActive="active">Her Story</a>        
-        </div>
-    </div>
-    <div class="hanging-light">
-        <div class="their-line"></div>
         <div class="their-story">
-            <a routerLink="/story/meetup" routerLinkActive="active">Their Story</a>        
+            <a routerLink="/story/meetup" routerLinkActive="active">
+                <i class="glyphicon glyphicon-heart"></i>            
+            </a>        
         </div>
     </div>
     <div class="hanging-light">
-        <div class="invite-line"></div>
         <div class="invite-story">
-            <a routerLink="/invite" routerLinkActive="active">You are Invited!!</a>        
+            <a routerLink="/invite" routerLinkActive="active">
+                <i class="glyphicon glyphicon-bell"></i>                
+            </a>        
         </div>
     </div>
 </div>`
