@@ -10,7 +10,6 @@ import { ImageService } from '../service/image.service';
 const template: string = `
 <div class="container-fluid home wrapper">
     <div class="dummyRow">
-      <i class="glyphicon glyphicon-hand-down"></i>      
     </div>
     <img src="/images/savethedate.gif" class="savedate" />
     <img src="/images/wed.jpg" class="wed" />
@@ -21,7 +20,7 @@ const template: string = `
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
         <carousel [imagePaths]="hisImages" [id]="him"></carousel>
         <div class="right-button">
-            <a routerLink="/story/he" routerLinkActive="active" class="btn btn-lg btn-success"> 
+            <a routerLink="/story/he" routerLinkActive="active" class="btn btn-sm btn-success"> 
             His Story!!          
             </a>
         </div>
@@ -29,7 +28,7 @@ const template: string = `
       <div class="col-md-6 col-xs-12 col-lg-6 right-section">
         <carousel [imagePaths]="herImages" [id]="her"></carousel>
         <div class="right-button">
-            <a routerLink="/story/she" routerLinkActive="active" class="btn btn-lg btn-success"> 
+            <a routerLink="/story/she" routerLinkActive="active" class="btn btn-sm btn-warning"> 
             Her Story!!          
             </a>
         </div>

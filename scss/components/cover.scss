@@ -79,7 +79,7 @@ $circle-size : 50px;
 .their-story{
   @extend .story;  
   background : #b9b9b9;
-  background: linear-gradient(to right, white,pink);      
+  background: linear-gradient(to right, white,$gradient-color);      
   bottom:18px;
   left : $fixed-padding;
   > a {
@@ -93,7 +93,7 @@ $circle-size : 50px;
   .invite-story{
     @extend .story;      
     background : #2d83bc;
-    background: linear-gradient(to right, white, pink);          
+    background: linear-gradient(to right, white, $gradient-color);          
     bottom:$fixed-padding;
     right : $fixed-padding;
     > a {

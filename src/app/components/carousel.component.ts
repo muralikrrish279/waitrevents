@@ -33,7 +33,6 @@ export class CarouselComponent implements OnInit {
                 vertical: true,
                 verticalHeight: 600,
                 auto: true,
-                loop: true,
                 pauseOnHover: true
             });
               (<any>$('.vertical_slider')).last().lightSlider({
@@ -41,7 +40,6 @@ export class CarouselComponent implements OnInit {
                 vertical: true,
                 verticalHeight: 600,
                 auto: true,
-                loop: true,
                 pauseOnHover: true
             });
         });
