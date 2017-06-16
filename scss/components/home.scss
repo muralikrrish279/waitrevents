@@ -43,7 +43,7 @@ body{
 
   .left-section
   {
-    opacity: 0.9;
+    opacity: 1;
   }
 
    .left-button
@@ -62,8 +62,53 @@ body{
 
   .right-section
    { 
-    opacity: 0.9; 
+    opacity: 1; 
    }
+
+   /* Style the tab */
+.hometab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background : linear-gradient(to right,white,mediumpurple);
+}
+
+/* Style the buttons inside the tab */
+.hometab button {
+    background : slateblue;
+    float: left;
+    border: 1px solid;
+    width: 33.3%;
+    outline: none;
+    color: white;
+    cursor: pointer ;
+    border: 0.5 solid white;
+    padding: 14px 16px;
+    transition: 0.3s;
+    z-index: 10000;
+    
+    >a {
+      color: white;
+      >i{
+        font-size : 16px;
+        margin-left: 2%;
+        padding: 10px;
+      }
+    }
+}
+
+.hometab-links{
+  width: 33.3%;
+}
+
+/* Change background color of buttons on hover */
+.hometab button:hover {
+    background-color: darkslateblue;
+}
+
+/* Create an active/current tablink class */
+.hometab button.active {
+    background-color: darkslateblue;
+}
 
   }
 
@@ -72,11 +117,11 @@ body{
       width: 50px;
       border-radius: 50%;
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      top: 2%;
+      right: 1%;
       text-align : center; 
       line-height : 57px;
-      background: linear-gradient(to right,palevioletred,lightsalmon);
+      background: linear-gradient(to right,mediumpurple,darkslateblue);
 
       >a >i{
         color: white;
@@ -85,6 +130,7 @@ body{
    }
 
    .savedate{
+     z-index: -1;
      position: fixed;
      top :40px;
      right : 10px;
@@ -96,6 +142,7 @@ body{
 
 
     .ready{
+     z-index: -1;      
      opacity: 1;
      position: fixed;
      top :40px;
@@ -107,6 +154,7 @@ body{
    }
 
     .wed{
+     z-index: -1;      
      position: fixed;
      top :40px;
      left : 10px;

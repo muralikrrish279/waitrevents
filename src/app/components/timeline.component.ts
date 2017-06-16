@@ -43,7 +43,6 @@ export class TimelineComponent implements OnInit {
 
     getClassName(index: number): string {
         if (index % 2 !== 0) {
-            console.log(index)
             return "timeline-inverted";
         }else{
             return "";

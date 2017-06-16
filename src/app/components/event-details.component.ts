@@ -13,10 +13,14 @@ const template: string = `
         <img src="/images/cover.jpg" alt="Invitation"/>
     </div>
     <div class="tab">
-        <button class="tablinks" [ngClass] = "{'active' : isInvitation}" (click)="toggleFlag('Invitation')">Invitation</button>
-        <button class="tablinks" [ngClass] = "{'active' : isStory}" (click)="toggleFlag('Story')">Hookup Story!!</button>
-        <button class="tablinks" [ngClass] = "{'active' : isMap}" (click)="toggleFlag('Map')">Map</button>
-        <button class="tablinks" [ngClass] = "{'active' : isLive}" (click)="toggleFlag('Live')">Live</button>        
+        <button class="tablinks" [ngClass] = "{'active' : isInvitation}" (click)="toggleFlag('Invitation')">
+        <i class="glyphicon glyphicon-bullhorn"></i>Invitation</button>
+        <button class="tablinks" [ngClass] = "{'active' : isStory}" (click)="toggleFlag('Story')">
+        <i class="glyphicon glyphicon-link"></i>Hookup!!</button>
+        <button class="tablinks" [ngClass] = "{'active' : isMap}" (click)="toggleFlag('Map')">
+        <i class="glyphicon glyphicon-map-marker"></i>Location</button>
+        <button class="tablinks" [ngClass] = "{'active' : isLive}" (click)="toggleFlag('Live')">
+        <i class="glyphicon glyphicon-facetime-video"></i>Forecast</button>        
     </div>
     <div class="invitation" id="invitation" *ngIf="isInvitation">
         <img src="/images/invite.jpg" alt="Invitation"/>
@@ -44,10 +48,10 @@ const template: string = `
     template: template
 })
 export class EventDetailsComponent implements OnInit {
-    private isInvitation: boolean = true;
-    private isMap: boolean = false;
-    private isLive: boolean = false;
-    private isStory: boolean = false;
+    public isInvitation: boolean = true;
+    public isMap: boolean = false;
+    public isLive: boolean = false;
+    public isStory: boolean = false;
 
     constructor(private route: ActivatedRoute, private router: Router) {
 

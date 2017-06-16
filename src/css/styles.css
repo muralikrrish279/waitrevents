@@ -4,7 +4,7 @@
   padding: 5%;
   border-radius: 2%;
   width: 90%;
-  background: linear-gradient(to right, white, whitesmoke);
+  background: linear-gradient(to right, white, ivory);
   opacity: .95; }
 
 .timeline {
@@ -133,70 +133,101 @@
 .timeline-body > p + p {
   margin-top: 5px; }
 
+@media (min-width: 600px) {
+  .timeline-panel {
+    float: right; } }
+
 body {
   background-image: url("/images/body.jpg");
   background-repeat: no-repeat;
   background-size: 100%; }
 
-.home .trollImage {
-  width: 100%;
-  height: 100%; }
-
-.home .dummyRow {
-  height: 250px; }
-  .home .dummyRow > i {
-    position: fixed;
-    top: 10;
-    left: 47%;
-    font-size: 48px;
-    color: gray; }
-
-.home .header {
-  min-height: 150px;
-  text-align: center; }
-  .home .header .event-details {
+.home {
+  /* Style the tab */
+  /* Style the buttons inside the tab */
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */ }
+  .home .trollImage {
+    width: 100%;
+    height: 100%; }
+  .home .dummyRow {
+    height: 250px; }
+    .home .dummyRow > i {
+      position: fixed;
+      top: 10;
+      left: 47%;
+      font-size: 48px;
+      color: gray; }
+  .home .header {
     min-height: 150px;
-    width: 300px;
-    padding: 10px;
-    margin: 10px; }
-
-.home .footer {
-  padding-top: 5%;
-  min-height: 30px;
-  text-align: center;
-  color: white; }
-
-.home .left-section {
-  opacity: 0.9; }
-
-.home .left-button {
-  font-weight: 700;
-  float: right;
-  padding-bottom: 10px; }
-
-.home .right-button {
-  font-weight: 700;
-  padding-bottom: 10px;
-  float: right; }
-
-.home .right-section {
-  opacity: 0.9; }
+    text-align: center; }
+    .home .header .event-details {
+      min-height: 150px;
+      width: 300px;
+      padding: 10px;
+      margin: 10px; }
+  .home .footer {
+    padding-top: 5%;
+    min-height: 30px;
+    text-align: center;
+    color: white; }
+  .home .left-section {
+    opacity: 1; }
+  .home .left-button {
+    font-weight: 700;
+    float: right;
+    padding-bottom: 10px; }
+  .home .right-button {
+    font-weight: 700;
+    padding-bottom: 10px;
+    float: right; }
+  .home .right-section {
+    opacity: 1; }
+  .home .hometab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: linear-gradient(to right, white, mediumpurple); }
+  .home .hometab button {
+    background: slateblue;
+    float: left;
+    border: 1px solid;
+    width: 33.3%;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border: 0.5 solid white;
+    padding: 14px 16px;
+    transition: 0.3s;
+    z-index: 10000; }
+    .home .hometab button > a {
+      color: white; }
+      .home .hometab button > a > i {
+        font-size: 16px;
+        margin-left: 2%;
+        padding: 10px; }
+  .home .hometab-links {
+    width: 33.3%; }
+  .home .hometab button:hover {
+    background-color: darkslateblue; }
+  .home .hometab button.active {
+    background-color: darkslateblue; }
 
 .home-link {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 2%;
+  right: 1%;
   text-align: center;
   line-height: 57px;
-  background: linear-gradient(to right, palevioletred, lightsalmon); }
+  background: linear-gradient(to right, mediumpurple, darkslateblue); }
   .home-link > a > i {
     color: white;
     font-size: 25px; }
 
 .savedate {
+  z-index: -1;
   position: fixed;
   top: 40px;
   right: 10px;
@@ -206,6 +237,7 @@ body {
   transform: rotate(7deg) translateX(-10%); }
 
 .ready {
+  z-index: -1;
   opacity: 1;
   position: fixed;
   top: 40px;
@@ -216,6 +248,7 @@ body {
   filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8)); }
 
 .wed {
+  z-index: -1;
   position: fixed;
   top: 40px;
   left: 10px;
@@ -285,7 +318,7 @@ p {
   padding: 10px;
   border-radius: 2%;
   width: 90%;
-  background: linear-gradient(to right, white, whitesmoke);
+  background: linear-gradient(to right, white, ivory);
   opacity: .9;
   /* Style the tab */
   /* Style the buttons inside the tab */
@@ -333,23 +366,31 @@ p {
   .eventsHome .skype {
     text-align: center; }
     .eventsHome .skype > a > img {
-      width: 80%;
-      height: 100%;
+      width: 60%;
+      height: 60%;
       padding-top: 10px; }
   .eventsHome div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background: linear-gradient(to right, white, mediumpurple); }
   .eventsHome div.tab button {
-    background: mediumpurple;
+    background: slateblue;
     float: left;
-    border: none;
+    border: 1px solid;
+    width: 25%;
     outline: none;
     color: white;
     cursor: pointer;
     border: 0.5 solid white;
     padding: 14px 16px;
     transition: 0.3s; }
+    .eventsHome div.tab button > i {
+      color: white;
+      font-size: 16px;
+      margin-left: 2%;
+      padding: 10px; }
+  .eventsHome div.tab-links {
+    width: 25%; }
   .eventsHome div.tab button:hover {
     background-color: darkslateblue; }
   .eventsHome div.tab button.active {
@@ -406,7 +447,7 @@ p {
       color: darkgreen; }
   .cover .their-story {
     background: #b9b9b9;
-    background: linear-gradient(to right, white, whitesmoke);
+    background: linear-gradient(to right, white, ivory);
     bottom: 18px;
     left: 10px; }
     .cover .their-story > a {
@@ -415,7 +456,7 @@ p {
       font-size: 22px; }
   .cover .invite-story {
     background: #2d83bc;
-    background: linear-gradient(to right, white, whitesmoke);
+    background: linear-gradient(to right, white, ivory);
     bottom: 10px;
     right: 10px; }
     .cover .invite-story > a {

@@ -16,22 +16,29 @@ const template: string = `
     <a routerLink="/invite" routerLinkActive="active" title="Click me!!">
       <img src="/images/ready.png" class="ready" />         
     </a>
+    <div class="hometab">
+        <button class="hometab-links" [ngClass] = "{'active' : isInvitation}" (click)="toggleFlag('Invitation')">
+          <a routerLink="/invite" routerLinkActive="active"> 
+              <i class="glyphicon glyphicon-send"></i>Invitation      
+          </a>
+        </button>
+        <button class="hometab-links" [ngClass] = "{'active' : isHim}" (click)="toggleFlag('Him')">
+          <a routerLink="/story/he" routerLinkActive="active"> 
+              <i class="glyphicon glyphicon-king"></i>His Story!!          
+          </a>
+        </button>
+        <button class="hometab-links" [ngClass] = "{'active' : isHer}" (click)="toggleFlag('Her')">
+          <a routerLink="/story/she" routerLinkActive="active"> 
+              <i class="glyphicon glyphicon-queen"></i>Her Story!!          
+          </a>
+        </button>
+    </div>
     <div class="row">
       <div class="col-md-6 col-xs-12 col-lg-6 left-section">
-        <carousel [imagePaths]="hisImages" [id]="him"></carousel>
-        <div class="right-button">
-            <a routerLink="/story/he" routerLinkActive="active" class="btn btn-sm btn-success"> 
-            His Story!!          
-            </a>
-        </div>
+        <carousel [imagePaths]="hisImages"></carousel>
       </div>
       <div class="col-md-6 col-xs-12 col-lg-6 right-section">
-        <carousel [imagePaths]="herImages" [id]="her"></carousel>
-        <div class="right-button">
-            <a routerLink="/story/she" routerLinkActive="active" class="btn btn-sm btn-warning"> 
-            Her Story!!          
-            </a>
-        </div>
+        <carousel [imagePaths]="herImages"></carousel>
       </div>
     </div>
     <div class="row footer">
@@ -46,12 +53,35 @@ const template: string = `
 export class HomeComponent {
   @Input() data: types.ITimeline;
 
-  private hisImages: string[] = [];
-  private herImages: string[];
+  public isInvitation: boolean = false;
+  public isHim: boolean = false;
+  public isHer: boolean = false;
+  public hisImages: string[] = [];
+  public herImages: string[];
 
   constructor(private imageService: ImageService) {
     this.hisImages = he.images;
     this.herImages = she.images;
+  }
+
+
+  toggleFlag(action: string): void {
+    this.isInvitation = false;
+    this.isHer = false;
+    this.isHim = false;
+    switch (action) {
+      case "Invitation":
+        this.isInvitation = true;
+        break;
+      case "Him":
+        this.isHim = true;
+        break;
+      case "Her":
+        this.isHer = true;
+        break;
+      default:
+        break;
+    }
   }
 
 

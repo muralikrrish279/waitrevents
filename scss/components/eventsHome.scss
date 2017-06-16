@@ -74,8 +74,8 @@
       @extend .section;
       text-align: center;
       > a  >img{
-        width : 80%;
-        height : 100%;
+        width : 60%;
+        height : 60%;
         padding-top: 10px;
       }
     }
@@ -88,15 +88,26 @@ div.tab {
 
 /* Style the buttons inside the tab */
 div.tab button {
-    background : mediumpurple;
+    background : slateblue;
     float: left;
-    border: none;
+    border: 1px solid;
+    width: 25%;
     outline: none;
     color: white;
     cursor: pointer ;
     border: 0.5 solid white;
     padding: 14px 16px;
     transition: 0.3s;
+    >i{
+        color:white;
+        font-size : 16px;
+        margin-left: 2%;
+        padding: 10px;
+      }
+}
+
+div.tab-links{
+  width: 25%;
 }
 
 /* Change background color of buttons on hover */
