@@ -133,10 +133,6 @@
 .timeline-body > p + p {
   margin-top: 5px; }
 
-@media (min-width: 600px) {
-  .timeline-panel {
-    float: right; } }
-
 body {
   background-image: url("/images/body.jpg");
   background-repeat: no-repeat;
@@ -196,9 +192,10 @@ body {
     color: white;
     cursor: pointer;
     border: 0.5 solid white;
-    padding: 14px 16px;
+    padding: 10px 12px;
     transition: 0.3s;
-    z-index: 10000; }
+    z-index: 10000;
+    font-size: 12px; }
     .home .hometab button > a {
       color: white; }
       .home .hometab button > a > i {
@@ -224,7 +221,7 @@ body {
   background: linear-gradient(to right, mediumpurple, darkslateblue); }
   .home-link > a > i {
     color: white;
-    font-size: 25px; }
+    font-size: 20px; }
 
 .savedate {
   z-index: -1;
@@ -382,8 +379,9 @@ p {
     color: white;
     cursor: pointer;
     border: 0.5 solid white;
-    padding: 14px 16px;
-    transition: 0.3s; }
+    padding: 10px 12px;
+    transition: 0.3s;
+    font-size: 12px; }
     .eventsHome div.tab button > i {
       color: white;
       font-size: 16px;

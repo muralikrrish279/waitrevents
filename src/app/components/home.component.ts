@@ -17,7 +17,8 @@ const template: string = `
       <img src="/images/ready.png" class="ready" />         
     </a>
     <div class="hometab">
-        <button class="hometab-links" [ngClass] = "{'active' : isInvitation}" (click)="toggleFlag('Invitation')">
+        <button class="hometab-links" [ngClass] = "{'active' : isInvitation}" 
+        (click)="toggleFlag('Invitation')" style="font-size : 14px;">
           <a routerLink="/invite" routerLinkActive="active"> 
               <i class="glyphicon glyphicon-send"></i>Invitation      
           </a>
