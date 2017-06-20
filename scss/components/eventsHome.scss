@@ -1,0 +1,125 @@
+.eventsHome{   
+    margin-left: 5%;
+    box-shadow: 0 1px 6px gray;
+    border: 1px;
+    padding : 10px;
+    border-radius: 2%;
+    width : 90%;
+    background: linear-gradient(to right,white,$gradient-color);
+    opacity: .9;
+
+    .section{
+      width : 100%;
+      min-height: 400px;
+      display: inline-block;
+      background: white;
+    }
+
+    .parallax { 
+    /* The image used */
+    background-image: url("/images/body.jpg");
+    /* Full height */
+    //height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+    .cover-header{
+      @extend .section;
+      text-align: center;
+      min-height: 100px;
+      >img{
+        width : 100%;
+        height : 100%;
+        padding-top: 10px;
+      }
+    }
+
+    .invitation{
+      @extend .section;
+      text-align: center;
+      >img{
+        width : 80%;
+        height : 100%;
+        padding-top: 10px;
+      }
+    }
+
+    .their-story{
+      @extend .section;
+      text-align: center;
+      
+      >img{
+        width : 80%;
+        height : 100%;
+        padding-top: 10px;
+      }
+    }
+
+    .map{
+      @extend .section;
+      text-align: center;
+      >iframe{
+        width : 80%;
+        height : 500px;
+        padding-top: 10px;
+      }
+    }
+
+    .skype{
+      @extend .section;
+      text-align: center;
+      > a  >img{
+        width : 60%;
+        height : 60%;
+        padding-top: 10px;
+      }
+    }
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background : linear-gradient(to right,white,mediumpurple);
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background : slateblue;
+    float: left;
+    border: 1px solid;
+    width: 25%;
+    outline: none;
+    color: white;
+    cursor: pointer ;
+    border: 0.5 solid white;
+    padding: 10px 12px;
+    transition: 0.3s;
+    font-size : 12px;
+    >i{
+        color:white;
+        font-size : 16px;
+        margin-left: 2%;
+        padding: 10px;
+      }
+}
+
+div.tab-links{
+  width: 25%;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: darkslateblue;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: darkslateblue;
+}
+
+
+  }
